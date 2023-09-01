@@ -200,8 +200,8 @@ func Info(msg ...string) {
 		_conf2.Info.log(INFO, "", msg)
 	}
 }
-func Infof(format string, a ...interface{}) {
-	Info(fmt.Sprintf(format, a...))
+func Infof(module string, format string, a ...interface{}) {
+	Info(module, fmt.Sprintf(format, a...))
 }
 
 func Warn(msg ...string) {
@@ -215,8 +215,8 @@ func Warn(msg ...string) {
 		_conf2.Warn.log(WARN, "", msg)
 	}
 }
-func Warnf(format string, a ...interface{}) {
-	Warn(fmt.Sprintf(format, a...))
+func Warnf(module string, format string, a ...interface{}) {
+	Warn(module, fmt.Sprintf(format, a...))
 }
 
 func Fail(msg ...string) {
@@ -230,8 +230,8 @@ func Fail(msg ...string) {
 		_conf2.Fail.log(FAIL, "", msg)
 	}
 }
-func Failf(format string, a ...interface{}) {
-	Fail(fmt.Sprintf(format, a...))
+func Failf(module string, format string, a ...interface{}) {
+	Fail(module, fmt.Sprintf(format, a...))
 }
 
 func Error(msg ...string) {
@@ -246,8 +246,8 @@ func Error(msg ...string) {
 	}
 }
 
-func Errorf(format string, a ...interface{}) {
-	Error(fmt.Sprintf(format, a...))
+func Errorf(module string, format string, a ...interface{}) {
+	Error(module, fmt.Sprintf(format, a...))
 }
 
 func Mail(subject string, msg ...string) {
@@ -263,8 +263,8 @@ func Mail(subject string, msg ...string) {
 	}
 }
 
-func Mailf(suject string, format string, a ...interface{}) {
-	Mail(suject, fmt.Sprintf(format, a...))
+func Mailf(suject string, module string, format string, a ...interface{}) {
+	Mail(suject, module, fmt.Sprintf(format, a...))
 }
 
 func (lv Level) ToString(flag string) string {
