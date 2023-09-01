@@ -55,7 +55,7 @@ func (c *Console) print(level Level, msg *Messgae) {
 		c.Println(msg.printMsg)
 		err := email.SendEmail(msg.subject, msg.msg)
 		if err != nil {
-			Errorf("send email failed! error:%s, subject:%s, msg:%s", err, msg.subject, msg.msg)
+			Errorf("send email failed! error:%s, subject:%s, msg:%s", err.Error(), msg.subject, msg.msg)
 		}
 	default:
 		c.Println(msg.printMsg)
